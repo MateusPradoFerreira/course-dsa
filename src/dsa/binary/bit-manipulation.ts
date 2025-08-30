@@ -1,4 +1,4 @@
-function toBinary(n = 1) {
+function toBinary(n = 1): any {
     if (!n || n < 1) return 0;
     let bin = "";
     while (n > 1) {
@@ -9,7 +9,7 @@ function toBinary(n = 1) {
 };
 
 function bitManipulation(n = 0) {
-    return toBinary(n).split("").filter(val => Number(val) === 1).length;
+    return toBinary(n).split("").filter((val: any) => Number(val) === 1).length;
 };
 
 console.log(bitManipulation(11));

@@ -1,4 +1,4 @@
-function missingNumber(arr = []) {
+function missingNumber(arr: any[] = []) {
     let x = 0;
     for (let i of arr) x ^= i;
     for (let i of Object.keys(arr)) x ^= Number(i) + 1;

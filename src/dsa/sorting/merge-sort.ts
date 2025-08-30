@@ -1,18 +1,18 @@
 class DllNode {
-  value = null;
-  prev = null;
-  next = null;
+  value: any = null;
+  prev: any = null;
+  next: any = null;
 
-  constructor (value) {
+  constructor (value: any) {
     this.value = value;
   };
 };
 
 class DoublyLinkedList {
-  head = null;
-  tail = null;
+  head: any = null;
+  tail: any = null;
 
-  addToFront(value) {
+  addToFront(value: any) {
     let newNode = new DllNode(value);
     newNode.next = this.head;
     if(this.head) {
@@ -23,7 +23,7 @@ class DoublyLinkedList {
     this.head = newNode
   };
 
-  addToEnd(value) {
+  addToEnd(value: any) {
     let newNode = new DllNode(value);
     newNode.prev = this.tail;
     if(this.tail) {
@@ -60,7 +60,7 @@ class DoublyLinkedList {
 
 };
 
-function getValues(head) {
+function getValues(head: any) {
     const list = [];
     while (head) {
         list.push(head.value)
@@ -70,7 +70,7 @@ function getValues(head) {
     return list
 }
 
-function findMiddle(head) {
+function findMiddle(head: any) {
     let slow = head;
     let fast = head?.next;
 
@@ -82,7 +82,7 @@ function findMiddle(head) {
     return slow;
 };
 
-function merge(l1, l2) {
+function merge(l1: any, l2: any) {
     let head = new DllNode(null);
     let tail = head;
 
@@ -101,7 +101,7 @@ function merge(l1, l2) {
     return head.next
 }
 
-function mergesort(head) {
+function mergesort(head: any) {
     if(!head || !head.next) {
         return head
     }
